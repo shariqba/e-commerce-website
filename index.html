@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <a href="#" class="logo">Tech<span>Shop</span></a>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for products...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="header-icons">
+                    <a href="#"><i class="fas fa-user"></i></a>
+                    <a href="#"><i class="fas fa-heart"></i></a>
+                    <a href="#" id="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="container">
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Laptops</a></li>
+                    <li><a href="#">Smartphones</a></li>
+                    <li><a href="#">Tablets</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Deals</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Tech Sale Up To 40% Off</h1>
+            <p>Discover the latest gadgets and electronics with exclusive discounts.</p>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Categories Slider Section -->
+    <section class="container">
+        <h2 class="section-title">Shop By Category</h2>
+        <div class="categories-slider-container">
+            <div class="categories-slider" id="categories-slider">
+                <div class="category-card" data-category="laptops">
+                    <div class="category-card-inner">
+                        <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1026&q=80');"></div>
+                        <div class="category-content">
+                            <h3>Laptops</h3>
+                            <button class="btn">Explore</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-card" data-category="smartphones">
+                    <div class="category-card-inner">
+                        <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1592750475338-74b7b21085ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80');"></div>
+                        <div class="category-content">
+                            <h3>Smartphones</h3>
+                            <button class="btn">Explore</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-card" data-category="tablets">
+                    <div class="category-card-inner">
+                        <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1561154464-82e9adf32764?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80');"></div>
+                        <div class="category-content">
+                            <h3>Tablets</h3>
+                            <button class="btn">Explore</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-card" data-category="accessories">
+                    <div class="category-card-inner">
+                        <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');"></div>
+                        <div class="category-content">
+                            <h3>Accessories</h3>
+                            <button class="btn">Explore</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-card" data-category="cameras">
+                    <div class="category-card-inner">
+                        <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1502920917128-1aa500764cbd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');"></div>
+                        <div class="category-content">
+                            <h3>Cameras</h3>
+                            <button class="btn">Explore</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-card" data-category="gaming">
+                    <div class="category-card-inner">
+                        <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1593305841991-05c297ba4575?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1057&q=80');"></div>
+                        <div class="category-content">
+                            <h3>Gaming</h3>
+                            <button class="btn">Explore</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="slider-btn prev-btn" id="prev-category">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="slider-dots" id="category-dots">
+                    <!-- Dots will be generated by JavaScript -->
+                </div>
+                <button class="slider-btn next-btn" id="next-category">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="container">
+        <div class="filter-section">
+            <h3>Filter Products</h3>
+            <div class="filter-options">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="laptops">Laptops</button>
+                <button class="filter-btn" data-filter="smartphones">Smartphones</button>
+                <button class="filter-btn" data-filter="tablets">Tablets</button>
+                <button class="filter-btn" data-filter="accessories">Accessories</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="container">
+        <h2 class="section-title">Featured Products</h2>
+        <div class="products" id="products-container">
+            <!-- Products will be loaded here by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Get the latest updates on new products and upcoming sales</p>
+            <form class="newsletter-form" id="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>TechShop</h3>
+                    <p>Your one-stop destination for all your tech needs. Quality products at affordable prices.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Order Tracking</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street, City</li>
+                        <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+                        <li><i class="fas fa-envelope"></i> info@techshop.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 TechShop. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart" id="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be loaded here by JavaScript -->
+        </div>
+        <div class="cart-total" id="cart-total">
+            Total: $0.00
+        </div>
+        <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        Product added to cart successfully!
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
